@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>setHeight() Demo</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="../source/setHeight.js"></script>
+	<style>
+		ul{margin:0; padding:0; font-size: 0;}
+		li{
+			font-size:13px;
+			display:inline-block;
+			background:#eee;
+			padding:25px;
+			margin:0 25px 25px 0;
+			width:350px;
+			vertical-align: top;
+		}
+		div div {margin:25px 0;}
+		</style>
+</head>
+<body>
+<div class="container">
+	<h2>Without setHeight</h2>
+	<div>
+		<ul>
+			<li>this is some basic content</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, placeat, quod, nemo aliquam nesciunt distinctio labore cum eum voluptas voluptate laborum totam soluta aspernatur vel quas iste accusamus explicabo quis.</li>
+			<li>this is some basic content</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, facilis, natus, vero exercitationem minus et culpa mollitia in molestiae autem dolorem voluptatibus illo porro. Dicta, dolores, placeat, a esse alias quibusdam beatae voluptatibus repellat architecto nam temporibus totam sunt aliquam ducimus dolor facilis ex nesciunt dolorum. Dolorem, voluptatum labore porro.</li>
+			<li>this is some basic content</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, blanditiis.</li>
+		</ul>
+	</div>
+
+	<h2>With setHeight</h2>
+	<code>jQuery("#with ul li").setHeight();</code>
+	<div id="with">
+		<ul>
+			<li>this is some basic content</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, placeat, quod, nemo aliquam nesciunt distinctio labore cum eum voluptas voluptate laborum totam soluta aspernatur vel quas iste accusamus explicabo quis.</li>
+			<li>this is some basic content</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, facilis, natus, vero exercitationem minus et culpa mollitia in molestiae autem dolorem voluptatibus illo porro. Dicta, dolores, placeat, a esse alias quibusdam beatae voluptatibus repellat architecto nam temporibus totam sunt aliquam ducimus dolor facilis ex nesciunt dolorum. Dolorem, voluptatum labore porro.</li>
+			<li>this is some basic content</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, blanditiis.</li>
+			<li>this is some basic content</li>
+			<li>this is some basic content</li>
+			<li>this is some basic content</li>
+		</ul>
+	</div>
+
+	<h2>With setHeight affecting each row independently (with a small structure change. Each row must be wrapped with an element)</h2>
+	<code>jQuery("#with2 ul").setHeight(true);</code>
+	<div id="witha">
+		<ul>
+			<li>this is some basic content</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, eaque libero ea odio explicabo. Deserunt quas quasi nostrum ut fugiat aliquid quae. At, neque, sit, eligendi voluptate dolor vel voluptates natus similique dolorum amet deleniti impedit possimus nihil vero sequi quas ut ratione ad odio nisi. Aliquam, unde, quis, explicabo sit quaerat molestiae architecto dolorem hic blanditiis facilis ipsam numquam aliquid ad quibusdam adipisci quo qui cumque at a possimus. Corporis, obcaecati nihil facere esse.</li>
+			<li>this is some basic content</li>
+		</ul>
+		<ul>
+			<li>this is some basic content</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, placeat, quod, nemo aliquam nesciunt distinctio labore cum eum voluptas voluptate laborum totam soluta aspernatur vel quas iste accusamus explicabo quis.</li>
+			<li>this is some basic content</li>
+		</ul>
+		<ul>
+			<li>this is some basic content</li>
+			<li>a</li>
+			<li>this is some basic content</li>
+		</ul>
+	</div>
+</div>
+	<script type="text/javascript">
+	jQuery("#with ul li").setHeight();
+	jQuery("#witha ul").setHeight(true);
+	</script>
+</body>
+</html>
